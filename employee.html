@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Employee Database - Sample Data</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .disclaimer {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            margin: 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .employee-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .employee-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .employee-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .employee-card h3 {
+            color: #2c3e50;
+            margin-top: 0;
+            font-size: 1.4em;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .info-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .info-label {
+            font-weight: bold;
+            color: #34495e;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        
+        .info-value {
+            color: #2c3e50;
+            font-size: 1em;
+        }
+        
+        .experience-section {
+            grid-column: 1 / -1;
+            background: #e8f4fd;
+            border-left: 3px solid #2980b9;
+        }
+        
+        .experience-section .info-label {
+            color: #2980b9;
+        }
+        
+        @media (max-width: 768px) {
+            .employee-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Healthcare Employee Database</h1>
+            <p>Sample Template for Development & Testing</p>
+        </div>
+        
+        <div class="disclaimer">
+            ⚠️ NOTICE: All data below is completely fictional and generated for demonstration purposes only. 
+            Do not use for any real-world applications involving actual personal information.
+        </div>
+        
+        <div class="employee-grid">
+            <!-- Employee 1 -->
+            <div class="employee-card">
+                <h3>👩‍⚕️ Dr. Sarah Johnson</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">First Name</div>
+                        <div class="info-value">Sarah</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Last Name</div>
+                        <div class="info-value">Johnson</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">s.johnson@sample.com</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Phone</div>
+                        <div class="info-value">(555) 123-4567</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Age</div>
+                        <div class="info-value">34</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Gender</div>
+                        <div class="info-value">Female</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Address</div>
+                        <div class="info-value">123 Medical Plaza Dr</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">City</div>
+                        <div class="info-value">Boston</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">State</div>
+                        <div class="info-value">Massachusetts</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">ZIP Code</div>
+                        <div class="info-value">02101</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Country</div>
+                        <div class="info-value">United States</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Employee ID</div>
+                        <div class="info-value">EMP-001</div>
+                    </div>
+                    <div class="info-item experience-section">
+                        <div class="info-label">Healthcare Experience</div>
+                        <div class="info-value">8 years - Emergency Medicine Physician, Board Certified. Previously worked at General Hospital ER, specialized in trauma care and emergency procedures.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Employee 2 -->
+            <div class="employee-card">
+                <h3>👨‍⚕️ Michael Chen</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">First Name</div>
+                        <div class="info-value">Michael</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Last Name</div>
+                        <div class="info-value">Chen</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">m.chen@sample.com</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Phone</div>
+                        <div class="info-value">(555) 234-5678</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Age</div>
+                        <div class="info-value">42</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Gender</div>
+                        <div class="info-value">Male</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Address</div>
+                        <div class="info-value">456 Healthcare Ave</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">City</div>
+                        <div class="info-value">San Francisco</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">State</div>
+                        <div class="info-value">California</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">ZIP Code</div>
+                        <div class="info-value">94102</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Country</div>
+                        <div class="info-value">United States</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Employee ID</div>
+                        <div class="info-value">EMP-002</div>
+                    </div>
+                    <div class="info-item experience-section">
+                        <div class="info-label">Healthcare Experience</div>
+                        <div class="info-value">15 years - Senior Registered Nurse, ICU specialist. Certified in critical care, cardiac monitoring, and patient care coordination. Leadership experience in nursing team management.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Employee 3 -->
+            <div class="employee-card">
+                <h3>👩‍⚕️ Dr. Emily Rodriguez</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">First Name</div>
+                        <div class="info-value">Emily</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Last Name</div>
+                        <div class="info-value">Rodriguez</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">e.rodriguez@sample.com</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Phone</div>
+                        <div class="info-value">(555) 345-6789</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Age</div>
+                        <div class="info-value">29</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Gender</div>
+                        <div class="info-value">Female</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Address</div>
+                        <div class="info-value">789 Wellness Blvd</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">City</div>
+                        <div class="info-value">Miami</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">State</div>
+                        <div class="info-value">Florida</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">ZIP Code</div>
+                        <div class="info-value">33101</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Country</div>
+                        <div class="info-value">United States</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Employee ID</div>
+                        <div class="info-value">EMP-003</div>
+                    </div>
+                    <div class="info-item experience-section">
+                        <div class="info-label">Healthcare Experience</div>
+                        <div class="info-value">5 years - Pediatric Nurse Practitioner. Specialized in child healthcare, immunizations, and family care coordination. Recently completed advanced pediatric certification.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Employee 4 -->
+            <div class="employee-card">
+                <h3>👨‍⚕️ David Thompson</h3>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">First Name</div>
+                        <div class="info-value">David</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Last Name</div>
+                        <div class="info-value">Thompson</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Email</div>
+                        <div class="info-value">d.thompson@sample.com</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Phone</div>
+                        <div class="info-value">(555) 456-7890</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Age</div>
+                        <div class="info-value">38</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Gender</div>
+                        <div class="info-value">Male</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Address</div>
+                        <div class="info-value">321 Medical Center St</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">City</div>
+                        <div class="info-value">Chicago</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">State</div>
+                        <div class="info-value">Illinois</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">ZIP Code</div>
+                        <div class="info-value">60601</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Country</div>
+                        <div class="info-value">United States</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Employee ID</div>
+                        <div class="info-value">EMP-004</div>
+                    </div>
+                    <div class="info-item experience-section">
+                        <div class="info-label">Healthcare Experience</div>
+                        <div class="info-value">12 years - Physical Therapist. Specialized in orthopedic rehabilitation, sports medicine, and post-surgical recovery. Certified in manual therapy techniques.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
